@@ -8,12 +8,19 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-
+/**
+ * 
+ * @author Safwah
+ *
+ */
 public class Main extends Application {
 	
 	private String landingPageURL = "/xml/LandingPage.fxml";
 	private String selectionPageURL = "/xml/SelectionPage.fxml";
 	
+	/**
+	 * 
+	 */
 	@Override
 	public void start(Stage stage){
 		try {
@@ -27,6 +34,10 @@ public class Main extends Application {
 		
 	}
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

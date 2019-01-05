@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package controller;
 
 import java.io.IOException;
@@ -13,19 +16,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * 
  * @author Safwah
  *
  */
-public class LandingPageController implements Initializable {
+public class SelectionPageController implements Initializable {
 
-	/**
-	 * 
-	 * @param event
-	 */
 	public void changeSceneToSelectionPage(ActionEvent event) {
 		try {
-			Parent selectionPageParent = FXMLLoader.load(getClass().getResource("/xml/SelectionPage.fxml"));
+			Parent selectionPageParent = FXMLLoader.load(getClass().getResource("/xml/LandingPage.fxml"));
 			Scene selectionPageScene = new Scene(selectionPageParent);
 			// this line gets the stage information
 			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -43,5 +41,7 @@ public class LandingPageController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 	}
-
+	
+	
+	
 }
