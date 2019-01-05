@@ -5,12 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="451.0" prefWidth="707.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<AnchorPane prefHeight="451.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LandingPageController">
    <children>
       <Pane layoutY="1.0" prefHeight="451.0" prefWidth="707.0">
          <children>
-            <Button layoutX="306.0" layoutY="343.0" mnemonicParsing="false" text="Next Scene" />
+            <Button layoutX="306.0" layoutY="343.0" mnemonicParsing="false" onAction="#changeSceneToSelectionPage" text="Next Scene" />
             <TextArea layoutX="14.0" layoutY="14.0" prefHeight="318.0" prefWidth="680.0" text="Welcome to Schedule my Plate!" />
          </children>
       </Pane>
