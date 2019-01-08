@@ -1,15 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="451.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectionPageController">
    <children>
-      <Pane prefHeight="418.0" prefWidth="636.0">
+      <AnchorPane prefHeight="355.0" prefWidth="707.0">
          <children>
-            <Button layoutX="272.0" layoutY="303.0" mnemonicParsing="false" onAction="#changeSceneToSelectionPage" text="Prev Scene" />
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="340.0">
+               <children>
+                  <Label text="Choose Your Meal Plan">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="35.0" layoutY="61.0" prefHeight="285.0" prefWidth="169.0">
+               <children>
+                  <Label text="Plates:">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" text="Day">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Week">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox layoutX="264.0" layoutY="61.0" prefHeight="285.0" prefWidth="181.0">
+               <children>
+                  <Label text="Meals:">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <CheckBox mnemonicParsing="false" text="Breakfast">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox layoutX="15.0" layoutY="46.0" mnemonicParsing="false" text="Lunch">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox layoutX="15.0" layoutY="72.0" mnemonicParsing="false" text="Dinner">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox layoutX="15.0" layoutY="98.0" mnemonicParsing="false" text="Snacks (2 a day)">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox layoutX="486.0" layoutY="61.0" prefHeight="269.0" prefWidth="149.0">
+               <children>
+                  <Label text="Single Plates:">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" text="Breakfast">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Lunch">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Dinner">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Snacks x2">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="139.0" text="Plate Me Up!">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
          </children>
-      </Pane>
+      </AnchorPane>
+      <BorderPane layoutY="362.0" prefHeight="89.0" prefWidth="707.0">
+         <center>
+            <Button mnemonicParsing="false" onAction="#changeSceneToSelectionPage" text="Need to change this code" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
