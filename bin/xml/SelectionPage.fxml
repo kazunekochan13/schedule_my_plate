@@ -122,7 +122,7 @@
       </AnchorPane>
       <BorderPane layoutY="362.0" prefHeight="89.0" prefWidth="707.0">
          <center>
-            <Button mnemonicParsing="false" onAction="#changeSceneToSelectionPage" text="Need to change this code" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage" text="Need to change this code" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

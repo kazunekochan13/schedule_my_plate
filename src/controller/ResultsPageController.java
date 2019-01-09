@@ -19,31 +19,27 @@ import javafx.stage.Stage;
  * @author Safwah
  *
  */
-public class SelectionPageController implements Initializable {
+public class ResultsPageController implements Initializable {
 
-	private String resultsPageURL = "/xml/ResultsPage.fxml";
+	private String selectionPageURL = "/xml/SelectionPage.fxml";
 
-	public void changeSceneToResultsPage(ActionEvent event) {
+	public void changeSceneToSelectionPage(ActionEvent event) {
 		try {
-			Parent resultsPageParent = FXMLLoader.load(getClass().getResource(resultsPageURL));
-			Scene resultsPageScene = new Scene(resultsPageParent);
+			Parent selectionPageParent = FXMLLoader.load(getClass().getResource(selectionPageURL));
+			Scene selectionPageScene = new Scene(selectionPageParent);
 			// this line gets the stage information
 			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-			window.setScene(resultsPageScene);
+			window.setScene(selectionPageScene);
 			window.show();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	/**
-	 * 
-	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
+
 }
