@@ -16,7 +16,6 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	
 	private String landingPageURL = "/xml/LandingPage.fxml";
-	private String selectionPageURL = "/xml/SelectionPage.fxml";
 	
 	/**
 	 * 

@@ -3,8 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -34,16 +34,11 @@
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </Label>
-                  <RadioButton mnemonicParsing="false" text="Day">
+                  <ChoiceBox fx:id="plates" prefWidth="150.0">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
-                  </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Week">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" />
-                     </VBox.margin>
-                  </RadioButton>
+                  </ChoiceBox>
                </children>
             </VBox>
             <VBox layoutX="264.0" layoutY="61.0" prefHeight="285.0" prefWidth="181.0">
@@ -78,7 +73,7 @@
                   </CheckBox>
                </children>
             </VBox>
-            <VBox layoutX="486.0" layoutY="61.0" prefHeight="269.0" prefWidth="149.0">
+            <VBox layoutX="486.0" layoutY="61.0" prefHeight="269.0" prefWidth="169.0">
                <children>
                   <Label text="Single Plates:">
                      <font>
@@ -88,27 +83,12 @@
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </Label>
-                  <RadioButton mnemonicParsing="false" text="Breakfast">
+                  <ChoiceBox fx:id="singlePlates" prefWidth="150.0">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
-                  </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Lunch">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" />
-                     </VBox.margin>
-                  </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Dinner">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" />
-                     </VBox.margin>
-                  </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Snacks x2">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" />
-                     </VBox.margin>
-                  </RadioButton>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="139.0" text="Plate Me Up!">
+                  </ChoiceBox>
+                  <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage2" prefHeight="31.0" prefWidth="150.0" text="Plate Me Up!">
                      <VBox.margin>
                         <Insets left="5.0" />
                      </VBox.margin>
@@ -122,7 +102,7 @@
       </AnchorPane>
       <BorderPane layoutY="362.0" prefHeight="89.0" prefWidth="707.0">
          <center>
-            <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage" text="Need to change this code" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage1" text="Need to change this code" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

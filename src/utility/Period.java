@@ -4,18 +4,20 @@
 package utility;
 
 /**
- * @author Safwah
+ * @author Safwah @ www.safwah.codes
  *
  */
-public enum Measurement {
-	GRAM ("g"), LITRE ("l");
+public enum Period {
+
+	DAY("Day"), WEEK("Week");
 	
 	private final String name;
-	Measurement(String name) {
+	Period(String name) {
 		this.name = name;
 	}
 	
 	public String toString() {
 		return name;
 	}
+	
 }

@@ -8,11 +8,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +24,19 @@ import javafx.stage.Stage;
 public class ResultsPageController implements Initializable {
 
 	private String selectionPageURL = "/xml/SelectionPage.fxml";
+	
+	@FXML
+	private TextArea view1;
+	@FXML
+	private TextArea view2InstructionList;
+	@FXML
+	private TextArea view2ShoppingList;
+	@FXML
+	private TextArea view3;
+	
+	public void changeView1(String recipes) {
+		view1.setText(recipes);
+	}
 
 	public void changeSceneToSelectionPage(ActionEvent event) {
 		try {
@@ -38,7 +53,7 @@ public class ResultsPageController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		view1 = new TextArea();
 		
 	}
 
