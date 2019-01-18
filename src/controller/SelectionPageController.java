@@ -47,43 +47,45 @@ public class SelectionPageController implements Initializable {
 	
 	
 	public void selectionPageLogic1(ResultsPageController controller) {
-		
+		System.out.println(plates.getSelectionModel().getSelectedItem());
 	}
 	
 	public void selectionPageLogic2(ResultsPageController controller) {
-		
+		controller.changeView1(singlePlates.getSelectionModel().getSelectedItem()); // CONTROLLER METHOD CALL WORKS!!!
 	}
-	
-	public void changeSceneToResultsPage(ActionEvent event, FXMLLoader loader) {
+
+	public void changeSceneToResultsPage1(ActionEvent event) {
+		FXMLLoader loader = new FXMLLoader(resultsPageURL);
+		Parent resultsPageParent = null;
 		try {
-			Parent resultsPageParent = loader.load();
-			Scene resultsPageScene = new Scene(resultsPageParent);
-			// this line gets the stage information
-			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-			window.setScene(resultsPageScene);
-			window.show();
+			resultsPageParent = loader.load();// This line is when the initialize() method in ResultsPageController is called so that getController() below does not return null
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	
-
-	public void changeSceneToResultsPage1(ActionEvent event) {
-		// logic inserted here
-		FXMLLoader loader = new FXMLLoader(resultsPageURL);
-		ResultsPageController controller = loader.getController();
+		ResultsPageController controller = loader.<ResultsPageController>getController();
 		selectionPageLogic1(controller);
-		// logic ends here
-		changeSceneToResultsPage(event, loader);
+		Scene resultsPageScene = new Scene(resultsPageParent);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(resultsPageScene);
+		window.show();
 	}
 	
 	public void changeSceneToResultsPage2(ActionEvent event) {
-		// logic inserted here
 		FXMLLoader loader = new FXMLLoader(resultsPageURL);
-		ResultsPageController controller = loader.getController();
+		Parent resultsPageParent = null;
+		try {
+			resultsPageParent = loader.load();// This line is when the initialize() method in ResultsPageController is called so that getController() below does not return null
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		ResultsPageController controller = loader.<ResultsPageController>getController();
 		selectionPageLogic2(controller);
-		// logic ends here
-		changeSceneToResultsPage(event, loader);
+		Scene resultsPageScene = new Scene(resultsPageParent);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(resultsPageScene);
+		window.show();
 	}
 	
 	/**

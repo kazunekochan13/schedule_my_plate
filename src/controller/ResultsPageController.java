@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,8 +35,8 @@ public class ResultsPageController implements Initializable {
 	@FXML
 	private TextArea view3;
 	
-	public void changeView1(String recipes) {
-		view1.setText(recipes);
+	public void changeView1(String recipe) {
+		view1.setText(recipe);
 	}
 
 	public void changeSceneToSelectionPage(ActionEvent event) {
@@ -53,7 +54,6 @@ public class ResultsPageController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		view1 = new TextArea();
 		
 	}
 

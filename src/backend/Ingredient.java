@@ -34,7 +34,7 @@ public class Ingredient {
 	}
 	
 	public String toString() {
-		return String.format("%.2f %s %s", quantity, unit.unit(), name);
+		return String.format("%.2f %s %s", quantity, unit.toString(), name);
 	}
 	
 }
