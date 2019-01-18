@@ -47,7 +47,15 @@ public class SelectionPageController implements Initializable {
 	
 	
 	public void selectionPageLogic1(ResultsPageController controller) {
-		System.out.println(plates.getSelectionModel().getSelectedItem());
+		String output = "";
+		output += plates.getSelectionModel().getSelectedItem();
+		output += "\n";
+		if (platesBreakfast.isSelected()) output += Meal.BREAKFAST.toString() + "\n";
+		if (platesLunch.isSelected()) output += Meal.LUNCH.toString() + "\n";
+		if (platesDinner.isSelected()) output += Meal.DINNER.toString() + "\n";
+		if (platesSnacks.isSelected()) output += Meal.SNACKS.toString();
+		controller.changeView1(output);
+		
 	}
 	
 	public void selectionPageLogic2(ResultsPageController controller) {

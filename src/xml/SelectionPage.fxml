@@ -51,22 +51,22 @@
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Breakfast">
+                  <CheckBox fx:id="platesBreakfast" mnemonicParsing="false" text="Breakfast">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </CheckBox>
-                  <CheckBox layoutX="15.0" layoutY="46.0" mnemonicParsing="false" text="Lunch">
+                  <CheckBox fx:id="platesLunch" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" text="Lunch">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </CheckBox>
-                  <CheckBox layoutX="15.0" layoutY="72.0" mnemonicParsing="false" text="Dinner">
+                  <CheckBox fx:id="platesDinner" layoutX="15.0" layoutY="72.0" mnemonicParsing="false" text="Dinner">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
                   </CheckBox>
-                  <CheckBox layoutX="15.0" layoutY="98.0" mnemonicParsing="false" text="Snacks (2 a day)">
+                  <CheckBox fx:id="platesSnacks" layoutX="15.0" layoutY="98.0" mnemonicParsing="false" text="Snacks (2 a day)">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" />
                      </VBox.margin>
@@ -102,7 +102,7 @@
       </AnchorPane>
       <BorderPane layoutY="362.0" prefHeight="89.0" prefWidth="707.0">
          <center>
-            <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage1" text="Need to change this code" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#changeSceneToResultsPage1" text="Schedule My Plate!" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>
